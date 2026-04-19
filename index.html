@@ -34,16 +34,16 @@
             <p>Access IPC, BNS, Constitution and know your legal rights</p>
             <div class="search-box">
                 <input type="text" id="mainSearch" placeholder="Search: murder, theft, dowry, rape, domestic violence..." onkeyup="searchAll(this.value)">
-                <button onclick="searchAll(document.getElementById('mainSearch').value)">🔍 Search</button>
+                <button type="button" onclick="handleSearch()">🔍 Search</button>
             </div>
             <div class="quick-links">
-                <span class="tag" onclick="quickSearch('murder')">Murder</span>
-                <span class="tag" onclick="quickSearch('rape')">Rape</span>
-                <span class="tag" onclick="quickSearch('theft')">Theft</span>
-                <span class="tag" onclick="quickSearch('dowry')">Dowry</span>
-                <span class="tag" onclick="quickSearch('domestic violence')">Domestic Violence</span>
-                <span class="tag" onclick="quickSearch('cheating')">Cheating</span>
-                <span class="tag" onclick="quickSearch('cybercrime')">Cybercrime</span>
+                <span class="tag" style="cursor:pointer;" onclick="quickSearch('murder')">Murder</span>
+                <span class="tag" style="cursor:pointer;" onclick="quickSearch('rape')">Rape</span>
+                <span class="tag" style="cursor:pointer;" onclick="quickSearch('theft')">Theft</span>
+                <span class="tag" style="cursor:pointer;" onclick="quickSearch('dowry')">Dowry</span>
+                <span class="tag" style="cursor:pointer;" onclick="quickSearch('domestic')">Domestic Violence</span>
+                <span class="tag" style="cursor:pointer;" onclick="quickSearch('cheating')">Cheating</span>
+                <span class="tag" style="cursor:pointer;" onclick="quickSearch('cybercrime')">Cybercrime</span>
             </div>
         </div>
     </section>

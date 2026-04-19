@@ -12,32 +12,37 @@ async function loadAllData() {
     try {
         // Load BNS data
         const bnsResponse = await fetch('data/bns.json');
+        if (!bnsResponse.ok) throw new Error('BNS data not found');
         const bnsJson = await bnsResponse.json();
         bnsData = bnsJson.sections || bnsJson;
         
         // Load IPC data
         const ipcResponse = await fetch('data/ipc.json');
+        if (!ipcResponse.ok) throw new Error('IPC data not found');
         const ipcJson = await ipcResponse.json();
         ipcData = ipcJson.sections;
         
         // Load Constitution data
         const constResponse = await fetch('data/constitution.json');
+        if (!constResponse.ok) throw new Error('Constitution data not found');
         const constJson = await constResponse.json();
         constitutionData = constJson.articles;
         
         allDataLoaded = true;
         console.log('All data loaded successfully!');
-        console.log('BNS:', bnsData.length || bnsData.sections?.length, 'sections');
+        console.log('BNS:', bnsData.length, 'sections');
         console.log('IPC:', ipcData.length, 'sections');
         console.log('Constitution:', constitutionData.length, 'articles');
         
     } catch (error) {
         console.error('Error loading data:', error);
+        // Try loading sample data as fallback
         loadSampleData();
+        allDataLoaded = true;
     }
 };
 
-// Fallback sample data
+// Fallback sample data - includes key crimes like rape and murder
 function loadSampleData() {
     // Complete BNS data (Sections 1-358)
     bnsData = [
@@ -45,6 +50,42 @@ function loadSampleData() {
         {section:2,title:"Definitions",chapter:1,punishment:null},
         {section:3,title:"General explanations",chapter:1,punishment:null},
         {section:4,title:"Punishments",chapter:2,punishment:"Death/Imprisonment/Fine"},
+        {section:92,title:"Punishment for rape",chapter:5,punishment:"Life/10 years"},
+        {section:95,title:"Gang rape",chapter:5,punishment:"Death/Life"},
+        {section:100,title:"Murder",chapter:6,punishment:"Death/Life"},
+        {section:101,title:"Culpable homicide amounting to murder",chapter:6,punishment:"Death/Life"},
+        {section:103,title:"Culpable homicide not amounting to murder",chapter:6,punishment:"Life/10 years"},
+        {section:107,title:"Attempt to commit murder",chapter:6,punishment:"10 years"},
+        {section:302,title:"Punishment for murder",chapter:16,punishment:"Death/Life"},
+        {section:304,title:"Culpable homicide not amounting to murder",chapter:16,punishment:"Life/10 years"},
+        {section:376,title:"Punishment for rape",chapter:16,punishment:"Life/10 years"},
+        {section:420,title:"Cheating and dishonestly inducing delivery of property",chapter:18,punishment:"7 years"},
+        {section:498,title:"Enticing or taking away or detaining with criminal intent a married woman",chapter:20,punishment:"2 years"},
+        {section:306,title:"Abetment of suicide",chapter:16,punishment:"7 years"},
+        {section:304A,title:"Causing death by negligence",chapter:16,punishment:"2 years"},
+        {section:323,title:"Voluntarily causing hurt",chapter:16,punishment:"1 year"},
+        {section:325,title:"Voluntarily causing grievous hurt",chapter:16,punishment:"7 years"},
+        {section:326,title:"Voluntarily causing grievous hurt by dangerous weapons",chapter:16,punishment:"Life/10 years"},
+        {section:354,title:"Assault or criminal force to woman with intent to outrage her modesty",chapter:16,punishment:"2 years"},
+        {section:509,title:"Word, gesture or act intended to insult the modesty of a woman",chapter:21,punishment:"1 year"},
+    ];
+    
+    ipcData = [
+        {section:302,title:"Punishment for murder",chapter:16,punishment:"Death/Life"},
+        {section:304,title:"Culpable homicide not amounting to murder",chapter:16,punishment:"Life/10 years"},
+        {section:376,title:"Punishment for rape",chapter:16,punishment:"Life/10 years"},
+        {section:420,title:"Cheating and dishonestly inducing delivery of property",chapter:18,punishment:"7 years"},
+    ];
+    
+    constitutionData = [
+        {article:14,title:"Equality before law",part:1},
+        {article:19,title:"Protection of certain rights regarding freedom of speech",part:3},
+        {article:21,title:"Protection of life and personal liberty",part:3},
+        {article:32,title:"Remedies for enforcement of fundamental rights",part:3},
+    ];
+    
+    console.log('Sample data loaded');
+}
         {section:5,title:"Commutation of sentence",chapter:2,punishment:null},
         {section:6,title:"Fractions of terms of punishment",chapter:2,punishment:null},
         {section:7,title:"Rigorous or simple imprisonment",chapter:2,punishment:null},
@@ -820,6 +861,13 @@ function toggleMenu() {
     nav.classList.toggle('show');
 }
 
+// Handle search button click
+function handleSearch() {
+    const query = document.getElementById('mainSearch').value;
+    console.log('Search button clicked:', query);
+    searchAll(query);
+}
+
 // Search from hero section
 function searchAll(query) {
     if (!query || query.length < 1) {
@@ -827,15 +875,27 @@ function searchAll(query) {
         return;
     }
     
+    // Check if data is loaded
+    if (!allDataLoaded || bnsData.length === 0) {
+        document.getElementById('resultsContent').innerHTML = '<p style="text-align:center; color:#666; padding:20px;">Loading data... Please wait a moment and try again.</p>';
+        document.getElementById('results').style.display = 'block';
+        return;
+    }
+    
     query = query.toLowerCase().trim();
     let resultsHTML = '';
     let found = false;
+    
+    console.log('Searching for:', query);
+    console.log('BNS data available:', bnsData.length);
     
     // Search BNS
     let bnsSection = parseInt(query);
     let bnsResults = isNaN(bnsSection) 
         ? bnsData.filter(law => law.title && law.title.toLowerCase().includes(query))
         : bnsData.filter(law => law.section === bnsSection);
+    
+    console.log('BNS results:', bnsResults.length);
     
     if (bnsResults.length > 0) {
         found = true;
@@ -852,6 +912,8 @@ function searchAll(query) {
         ? ipcData.filter(law => law.title && law.title.toLowerCase().includes(query))
         : ipcData.filter(law => law.section === bnsSection);
     
+    console.log('IPC results:', ipcResults.length);
+    
     if (ipcResults.length > 0) {
         found = true;
         resultsHTML += '<h3>📜 IPC Results</h3>';
@@ -866,6 +928,8 @@ function searchAll(query) {
     let constResults = isNaN(bnsSection)
         ? constitutionData.filter(law => law.title && law.title.toLowerCase().includes(query))
         : constitutionData.filter(law => law.article === bnsSection);
+    
+    console.log('Constitution results:', constResults.length);
     
     if (constResults.length > 0) {
         found = true;
