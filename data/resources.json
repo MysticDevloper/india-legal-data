@@ -1,0 +1,255 @@
+{
+  "description": "Complete list of Indian legal resources, complaint portals, and emergency links",
+  "last_updated": "2025-04",
+  "categories": {
+    "emergency_contacts": {
+      "title": "Emergency Contacts",
+      "description": "Immediate help in emergency situations",
+      "links": [
+        {"name": "Police Emergency", "phone": "100", "description": "For any police emergency"},
+        {"name": "Women Helpline", "phone": "181", "description": "Women Helpline 24/7"},
+        {"name": "Child Helpline", "phone": "1098", "description": "Child rescue and protection"},
+        {"name": "Senior Citizen Helpline", "phone": "14567", "description": "Elderly assistance"},
+        {"name": "NDMC Helpline", "phone": "1800-11-4000", "description": "National Disaster Management"},
+        {"name": "Emergency", "phone": "112", "description": "Integrated Emergency Response"}
+      ]
+    },
+    "cybercrime": {
+      "title": "Cybercrime Complaints",
+      "description": "Report online fraud, hacking, cyberbullying",
+      "links": [
+        {"name": "National Cyber Crime Portal", "url": "https://cybercrime.gov.in", "description": "File cybercrime complaint (all India)"},
+        {"name": "Track Cyber Crime Complaint", "url": "https://cybercrime.gov.in/webform/trackcomplaint.aspx", "description": "Check complaint status"},
+        {"name": "Report Financial Fraud", "url": "https://cybercrime.gov.in/webform/cybercrime_financial_fraud.aspx", "description": "Report online financial fraud"},
+        {"name": "Report Women/Child Cybercrime", "url": "https://cybercrime.gov.in/webform/cybercrime_women_child.aspx", "description": "Cybercrime against women/children"}
+      ]
+    },
+    "police_complaints": {
+      "title": "Online FIR & Police Complaints",
+      "description": "File FIR or police complaint by state",
+      "state_portals": [
+        {"state": "Delhi", "portal": "https://delhipolice.gov.in", "services": "FIR, Lost Article, e-Complaint"},
+        {"state": "Maharashtra", "portal": "https://citizen.mahapolice.gov.in", "services": "Online FIR, Lost Report, Grievance"},
+        {"state": "Uttar Pradesh", "portal": "https://uppolice.gov.in", "services": "e-FIR, Complaint Status"},
+        {"state": "Karnataka", "portal": "https://sevasindhu.karnataka.gov.in", "services": "Police Services, e-FIR"},
+        {"state": "Tamil Nadu", "portal": "https://tnpoliceservices.gov.in", "services": "Online FIR, Complaint"},
+        {"state": "West Bengal", "portal": "https://wbpolice.gov.in", "services": "Online Complaint, e-FIR"},
+        {"state": "Gujarat", "portal": "https://gujaratpolice.gov.in", "services": "Online Complaint"},
+        {"state": "Kerala", "portal": "https://keralapolice.gov.in", "services": "Online FIR, Complaint"},
+        {"state": "Punjab", "portal": "https://punjabpolice.gov.in", "services": "Police Services"},
+        {"state": "Haryana", "portal": "https://haryanapolice.gov.in", "services": "Online FIR, Complaint"}
+      ]
+    },
+    "national_services": {
+      "title": "National Digital Police Services",
+      "description": "Central police services portal",
+      "links": [
+        {"name": "Digital Police Portal", "url": "https://digitalpolice.gov.in", "description": "File complaints, verify antecedents"},
+        {"name": "Missing Person Search", "url": "https://digitalpolice.gov.in/MissingPerson", "description": "Search missing persons"},
+        {"name": "Vehicle NOC", "url": "https://digitalpolice.gov.in/VehicleNOC", "description": "Vehicle No Objection Certificate"},
+        {"name": "Locate Nearest Police Station", "url": "https://digitalpolice.gov.in/Locate", "description": "Find nearest police station"},
+        {"name": "Lost Mobile Blocking (CEIR)", "url": "https://ceir.gov.in", "description": "Block lost/stolen mobile phone"}
+      ]
+    },
+    "legal_aid": {
+      "title": "Free Legal Aid Services",
+      "description": "Get free lawyer and legal assistance",
+      "links": [
+        {"name": "NALSA Portal", "url": "https://nalsa.gov.in", "description": "National Legal Services Authority"},
+        {"name": "Apply for Legal Aid", "url": "https://nalsa.gov.in/services/legal-aid", "description": "Free legal aid application"},
+        {"name": "Legal Aid Helpline", "phone": "15100", "description": "Toll-free legal aid helpline"},
+        {"name": "VANI - AI Legal Assistant", "url": "https://nalsa.gov.in/chatbot", "description": "AI chatbot for legal queries"},
+        {"name": "State Legal Services", "url": "https://nalsa.gov.in/help/", "description": "Links to all state legal services"}
+      ]
+    },
+    "women_safety": {
+      "title": "Women Safety & Protection",
+      "description": "Women safety and anti-domestic violence",
+      "links": [
+        {"name": "Women Safety Portal", "url": "https://nalsa.gov.in/womens-assistance/", "description": "Women's legal assistance"},
+        {"name": "Nari Ki Udaan", "url": "https://nalsa.gov.in/nari-ki-udan/", "description": "Scheme for women"},
+        {"name": "POSH Act Guidelines", "url": "https://nalsa.gov.in/posh/", "description": "Workplace harassment"},
+        {"name": "Women Helpline", "phone": "181", "description": "24/7 Women Helpline"}
+      ]
+    },
+    "court_services": {
+      "title": "Court Services",
+      "description": "Access to courts and case tracking",
+      "links": [
+        {"name": "eCourts Services", "url": "https://services.ecourts.gov.in", "description": "Case status, orders, cause lists"},
+        {"name": "Supreme Court", "url": "https://main.sci.gov.in", "description": "Supreme Court of India"},
+        {"name": "High Courts List", "url": "https://main.sci.gov.in/online-courts", "description": "All High Courts"},
+        {"name": "National Judicial Data", "url": "https://njdg.ecourts.gov.in", "description": "NJDG - Case database"},
+        {"name": "Lok Adalat", "url": "https://nalsa.gov.in/lok-adalat", "description": "Online Lok Adalat"}
+      ]
+    },
+    "consumer_protection": {
+      "title": "Consumer Protection",
+      "description": "Consumer rights and complaints",
+      "links": [
+        {"name": "Consumer Helpline", "phone": "1800-11-4000", "description": "Consumer complaints"},
+        {"name": "Consumer Online Portal", "url": "https://consumeraffairs.nic.in", "description": "Consumer affairs"},
+        {"name": "Filing Consumer Complaint", "url": "https://e-daakhil.nic.in", "description": "Online consumer court"}
+      ]
+    },
+    "anti_corruption": {
+      "title": "Anti-Corruption & Grievances",
+      "description": "Report corruption and government complaints",
+      "links": [
+        {"name": "CVC Portal", "url": "https://cvc.nic.in", "description": "Central Vigilance Commission"},
+        {"name": "Lokayukta (Delhi)", "url": "https://delhilokayukta.nic.in", "description": "State corruption complaints"},
+        {"name": "CPGRAMS", "url": "https://pgportal.gov.in", "description": "Central Grievance Redressal"},
+        {"name": "Parliament Questions", "url": "https://pgportal.gov.in", "description": "Government grievances"}
+      ]
+    },
+    "worker_rights": {
+      "title": "Worker Rights & Employment",
+      "description": "Labor rights and complaints",
+      "links": [
+        {"name": "EPFO Portal", "url": "https://epfindia.gov.in", "description": "Employee Provident Fund"},
+        {"name": "ESIC Portal", "url": "https://esic.gov.in", "description": "Employee State Insurance"},
+        {"name": "Labor Helpline", "phone": "1800-11-4756", "description": "Labor welfare helpline"},
+        {"name": "Shram Suvidha", "url": "https://shramsuvidha.gov.in", "description": "Labor compliance portal"}
+      ]
+    },
+    "property_rights": {
+      "title": "Property & Land Rights",
+      "description": "Property disputes and registration",
+      "links": [
+        {"name": "Land Records", "url": "https://bhumigram.nic.in", "description": "Digitized land records"},
+        {"name": "Property Registration (Delhi)", "url": "https://igrs.delhi.gov.in", "services": "Property registration"}
+      ]
+    },
+    "medical_legal": {
+      "title": "Medical & Health Legal",
+      "description": "Health-related legal services",
+      "links": [
+        {"name": "Mental Health Helpline", "phone": "1800-599-0019", "description": "Mental health support"},
+        {"name": "Drug Alerts", "url": "https://cdsco.gov.in", "description": "Drug control"},
+        {"name": "Clinical Establishments", "url": "https://cliniq.co.in", "description": "Clinical establishment search"}
+      ]
+    },
+    "right_to_information": {
+      "title": "Right to Information",
+      "description": "RTI filing and tracking",
+      "links": [
+        {"name": "RTI Portal", "url": "https://rti.gov.in", "description": "Central RTI application"},
+        {"name": "RTI Online", "url": "https://rtionline.gov.in", "description": "File RTI online"},
+        {"name": "CIC", "url": "https://cic.gov.in", "description": "Central Information Commission"}
+      ]
+    },
+    "legal_awareness": {
+      "title": "Legal Awareness & Education",
+      "description": "Learn about Indian laws",
+      "links": [
+        {"name": "India Code", "url": "https://indiacode.nic.in", "description": "All Indian laws"},
+        {"name": "BNS Full Text", "url": "https://legislative.gov.in", "description": "Bharatiya Nyaya Sanhita"},
+        {"name": "Constitution", "url": "https://constitutionofindia.nic.in", "description": "Constitution of India"},
+        {"name": "Legal Aid Awareness", "url": "https://nalsa.gov.in/awareness", "description": "Legal literacy"}
+      ]
+    }
+  },
+  "quick_guide": {
+    "title": "Quick Action Guide - What to do in different situations",
+    "scenarios": [
+      {
+        "situation": "Theft/Burglary",
+        "steps": [
+          "1. File FIR online at your state police portal OR visit nearest police station",
+          "2. Get FIR copy with FIR number",
+          "3. For insurance: submit FIR copy to insurer"
+        ],
+        "portals": ["https://delhipolice.gov.in", "https://citizen.mahapolice.gov.in"]
+      },
+      {
+        "situation": "Cyber Fraud/Scam",
+        "steps": [
+          "1. Immediately call your bank to block transaction",
+          "2. File complaint at cybercrime.gov.in",
+          "3. Save acknowledgment number",
+          "4. File police complaint at local station with proof"
+        ],
+        "portals": ["https://cybercrime.gov.in", "https://pgportal.gov.in"]
+      },
+      {
+        "situation": "Domestic Violence",
+        "steps": [
+          "1. Call women's helpline 181",
+          "2. File complaint at local police station",
+          "3. Apply for protection order at local court",
+          "4. Contact District Legal Services Authority for free lawyer"
+        ],
+        "portals": ["https://nalsa.gov.in/womens-assistance/", "https://nalsa.gov.in"]
+      },
+      {
+        "situation": "Police Not Taking Action",
+        "steps": [
+          "1. Wait 7 days for response",
+          "2. File written complaint to SP/Commissioner",
+          "3. If no action in 30 days, file complaint on CPGRAMS",
+          "4. Contact Human Rights Commission if serious"
+        ],
+        "portals": ["https://pgportal.gov.in", "https://nhrc.nic.in"]
+      },
+      {
+        "situation": "Can't Afford Lawyer",
+        "steps": [
+          "1. Call legal aid helpline 15100",
+          "2. Apply online at nalsa.gov.in",
+          "3. Or visit nearest District Legal Services Authority office",
+          "4. Free lawyer will be provided"
+        ],
+        "portals": ["https://nalsa.gov.in/services/legal-aid"]
+      },
+      {
+        "situation": "Lost Documents",
+        "steps": [
+          "1. File 'Lost Report' at state police portal",
+          "2. Get acknowledgment with reference number",
+          "3. Use this for new document application",
+          "4. Some portals: https://lostdocument.gov.in"
+        ],
+        "portals": ["https://digitalpolice.gov.in"]
+      },
+      {
+        "situation": "Landlord/Tenant Dispute",
+        "steps": [
+          "1. Send legal notice (can use free legal aid)",
+          "2. File complaint at Rent Control Court",
+          "3. Contact Legal Services for mediator"
+        ],
+        "portals": ["https://nalsa.gov.in/lok-adalat"]
+      },
+      {
+        "situation": "Workplace Harassment (POSH)",
+        "steps": [
+          "1. File written complaint to Internal Committee",
+          "2. If no response in 10 days, file with Local Committee",
+          "3. Contact police if needed",
+          "4. Contact NALSA for legal aid"
+        ],
+        "portals": ["https://nalsa.gov.in/posh/"]
+      },
+      {
+        "situation": "Child Missing/Abuse",
+        "steps": [
+          "1. Call Child Helpline 1098 immediately",
+          "2. File FIR mentioning child details and incident",
+          "3. Police must register Zero FIR in any jurisdiction",
+          "4. Contact CHILDLINE for support"
+        ],
+        "portals": ["https://cybercrime.gov.in/webform/cybercrime_women_child.aspx"]
+      },
+      {
+        "situation": "Accident/Road Rage",
+        "steps": [
+          "1. Call 112 for emergency",
+          "2. Click photos/video if safe",
+          "3. Note vehicle number if vehicle involved",
+          "4. File complaint with video evidence"
+        ],
+        "portals": ["https://digitalpolice.gov.in"]
+      }
+    ]
+  }
+}
