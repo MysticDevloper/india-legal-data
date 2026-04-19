@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Legal Portal - Know Your Rights</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">⚖️</span>
+                <div class="logo-text">
+                    <h1>India Legal Portal</h1>
+                    <p>Know Your Rights • Get Justice</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#home" class="active">Home</a>
+                <a href="#search">Search Law</a>
+                <a href="#emergency">Emergency</a>
+                <a href="#resources">Resources</a>
+                <a href="#complaint">File Complaint</a>
+            </nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>🔍 Search Indian Laws Instantly</h2>
+            <p>Access IPC, BNS, Constitution and know your legal rights</p>
+            <div class="search-box">
+                <input type="text" id="mainSearch" placeholder="Search: murder, theft, dowry, rape, domestic violence..." onkeyup="searchAll(this.value)">
+                <button onclick="searchAll(document.getElementById('mainSearch').value)">🔍 Search</button>
+            </div>
+            <div class="quick-links">
+                <span class="tag" onclick="quickSearch('murder')">Murder</span>
+                <span class="tag" onclick="quickSearch('rape')">Rape</span>
+                <span class="tag" onclick="quickSearch('theft')">Theft</span>
+                <span class="tag" onclick="quickSearch('dowry')">Dowry</span>
+                <span class="tag" onclick="quickSearch('domestic violence')">Domestic Violence</span>
+                <span class="tag" onclick="quickSearch('cheating')">Cheating</span>
+                <span class="tag" onclick="quickSearch('cybercrime')">Cybercrime</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="results-section" style="display:none;">
+        <div class="container">
+            <h2>Search Results</h2>
+            <div id="resultsContent"></div>
+        </div>
+    </section>
+
+    <section id="emergency" class="emergency-section">
+        <div class="container">
+            <h2>🚨 Emergency Contacts</h2>
+            <div class="emergency-grid">
+                <div class="emergency-card">
+                    <div class="icon">🚔</div>
+                    <h3>Police</h3>
+                    <p class="number">100</p>
+                    <p>For any emergency</p>
+                </div>
+                <div class="emergency-card">
+                    <div class="icon">👩</div>
+                    <h3>Women Helpline</h3>
+                    <p class="number">181</p>
+                    <p>24/7 Support</p>
+                </div>
+                <div class="emergency-card">
+                    <div class="icon">🧒</div>
+                    <h3>Child Helpline</h3>
+                    <p class="number">1098</p>
+                    <p>Child Rescue</p>
+                </div>
+                <div class="emergency-card">
+                    <div class="icon">⚖️</div>
+                    <h3>Free Legal Aid</h3>
+                    <p class="number">15100</p>
+                    <p>Legal Help Free</p>
+                </div>
+                <div class="emergency-card">
+                    <div class="icon">🚑</div>
+                    <h3>Emergency</h3>
+                    <p class="number">112</p>
+                    <p>All Emergencies</p>
+                </div>
+                <div class="emergency-card">
+                    <div class="icon">💻</div>
+                    <h3>Cyber Crime</h3>
+                    <p class="number">1930</p>
+                    <p>Online Fraud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="search" class="search-section">
+        <div class="container">
+            <h2>📜 Search Indian Laws</h2>
+            <div class="search-tabs">
+                <button class="tab active" onclick="switchTab('bns')" id="tabBNS">BNS (Current Law)</button>
+                <button class="tab" onclick="switchTab('ipc')" id="tabIPC">IPC (Old Law)</button>
+                <button class="tab" onclick="switchTab('constitution')" id="tabConstitution">Constitution</button>
+            </div>
+            <div class="search-input">
+                <input type="number" id="sectionNumber" placeholder="Enter section number (e.g., 100, 302, 14)">
+                <input type="text" id="sectionSearch" placeholder="Or search by keyword..." onkeyup="searchByKeyword(this.value)">
+            </div>
+            <div id="lawResults" class="law-results"></div>
+        </div>
+    </section>
+
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <h2>🔗 Important Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>🖥️ File Police Complaint</h3>
+                    <ul>
+                        <li><a href="https://cybercrime.gov.in" target="_blank">Cyber Crime Portal</a></li>
+                        <li><a href="https://delhipolice.gov.in" target="_blank">Delhi Police</a></li>
+                        <li><a href="https://citizen.mahapolice.gov.in" target="_blank">Maharashtra Police</a></li>
+                        <li><a href="https://uppolice.gov.in" target="_blank">UP Police</a></li>
+                        <li><a href="https://digitalpolice.gov.in" target="_blank">Digital Police</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>⚖️ Free Legal Aid</h3>
+                    <ul>
+                        <li><a href="https://nalsa.gov.in" target="_blank">NALSA Portal</a></li>
+                        <li><a href="https://nalsa.gov.in/services/legal-aid" target="_blank">Apply for Free Lawyer</a></li>
+                        <li><a href="https://consumeraffairs.nic.in" target="_blank">Consumer Help</a></li>
+                        <li><a href="https://pgportal.gov.in" target="_blank">Govt Grievances</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>🏛️ Court Services</h3>
+                    <ul>
+                        <li><a href="https://services.ecourts.gov.in" target="_blank">eCourts Portal</a></li>
+                        <li><a href="https://main.sci.gov.in" target="_blank">Supreme Court</a></li>
+                        <li><a href="https://njdg.ecourts.gov.in" target="_blank">Case Status</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>📱 Other Important</h3>
+                    <ul>
+                        <li><a href="https://rtionline.gov.in" target="_blank">File RTI Online</a></li>
+                        <li><a href="https://epfindia.gov.in" target="_blank">EPFO / PF</a></li>
+                        <li><a href="https://ceir.gov.in" target="_blank">Lost Mobile Blocking</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="complaint" class="complaint-section">
+        <div class="container">
+            <h2>📝 How to File a Complaint</h2>
+            <div class="complaint-guides">
+                <div class="guide-card">
+                    <div class="guide-number">1</div>
+                    <h3>Theft / Burglary</h3>
+                    <p>1. Visit state police portal</p>
+                    <p>2. File FIR under "Online FIR"</p>
+                    <p>3. Get FIR copy for insurance</p>
+                    <a href="https://cybercrime.gov.in" target="_blank" class="btn">File Now →</a>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-number">2</div>
+                    <h3>Cyber Fraud / Scam</h3>
+                    <p>1. Call bank immediately to block</p>
+                    <p>2. File at cybercrime.gov.in</p>
+                    <p>3. Save acknowledgment number</p>
+                    <a href="https://cybercrime.gov.in" target="_blank" class="btn">File Now →</a>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-number">3</div>
+                    <h3>Domestic Violence</h3>
+                    <p>1. Call 181 Women Helpline</p>
+                    <p>2. File complaint at police</p>
+                    <p>3. Apply for free lawyer at NALSA</p>
+                    <a href="https://nalsa.gov.in" target="_blank" class="btn">Get Free Lawyer →</a>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-number">4</div>
+                    <h3>Police Not Taking Action</h3>
+                    <p>1. Wait 7 days</p>
+                    <p>2. File complaint to SP</p>
+                    <p>3. Escalate at pgportal.gov.in</p>
+                    <a href="https://pgportal.gov.in" target="_blank" class="btn">File Grievance →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-laws">
+        <div class="container">
+            <h2>📋 Quick Reference - Key Laws</h2>
+            <div class="laws-table">
+                <div class="law-item">
+                    <span class="label">Murder</span>
+                    <span class="ipc">IPC 302</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 100</span>
+                    <span class="punishment">Death / Life</span>
+                </div>
+                <div class="law-item">
+                    <span class="label">Rape</span>
+                    <span class="ipc">IPC 375</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 92</span>
+                    <span class="punishment">Life / 10 years</span>
+                </div>
+                <div class="law-item">
+                    <span class="label">Theft</span>
+                    <span class="ipc">IPC 379</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 138</span>
+                    <span class="punishment">3 years</span>
+                </div>
+                <div class="law-item">
+                    <span class="label">Dowry Death</span>
+                    <span class="ipc">IPC 304B</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 80,105</span>
+                    <span class="punishment">Life / 7 years</span>
+                </div>
+                <div class="law-item">
+                    <span class="label">Cruelty (Husband)</span>
+                    <span class="ipc">IPC 498A</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 85,189</span>
+                    <span class="punishment">3 years</span>
+                </div>
+                <div class="law-item">
+                    <span class="label">Sexual Harassment</span>
+                    <span class="ipc">IPC 354A</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 87</span>
+                    <span class="punishment">3 years</span>
+                </div>
+                <div class="law-item">
+                    <span class="label">Acid Attack</span>
+                    <span class="ipc">IPC 326A</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 121</span>
+                    <span class="punishment">Life</span>
+                </div>
+                <div class="law-item">
+                    <span class="label">Kidnapping</span>
+                    <span class="ipc">IPC 363</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 125</span>
+                    <span class="punishment">7 years</span>
+                </div>
+                <div class="law-item">
+                    <span class="label">Cheating</span>
+                    <span class="ipc">IPC 420</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 160</span>
+                    <span class="punishment">7 years</span>
+                </div>
+                <div class="law-item">
+                    <span class="label">Robbery</span>
+                    <span class="ipc">IPC 392</span>
+                    <span class="arrow">→</span>
+                    <span class="bns">BNS 147</span>
+                    <span class="punishment">10 years</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>📱 For immediate help, call <strong>15100</strong> (Free Legal Aid) | <strong>181</strong> (Women Help)</p>
+            <p class="disclaimer">This is for informational purposes only. Consult a lawyer for legal advice.</p>
+            <p class="copyright">© 2025 India Legal Portal | Data: IPC (511), BNS (358), Constitution (448)</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
