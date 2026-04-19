@@ -1,249 +1,139 @@
-# India Legal & Justice Portal
+# ⚖️ India Legal Portal - Know Your Rights
 
-A comprehensive database for **Indian Laws, Rights, and Legal Resources** - designed to help common people, lawyers, and judges access justice.
+<p align="center">
+  <a href="https://mysticdevloper.github.io/india-legal-data/">
+    <img src="https://img.shields.io/website?url=https://mysticdevloper.github.io/india-legal-data/&style=for-the-badge&label=LIVE+WEBSITE" alt="Live Website">
+  </a>
+  <img src="https://img.shields.io/github/last-commit/MysticDevloper/india-legal-data?style=for-the-badge" alt="Last Commit">
+  <img src="https://img.shields.io/github/size/MysticDevloper/india-legal-data?style=for-the-badge" alt="Repo Size">
+</p>
 
-## What's Inside
+## 🌐 Live Website
+**🔗 https://mysticdevloper.github.io/india-legal-data/**
 
-| Data | Count | Status |
-|------|-------|--------|
-| IPC Sections | 511 | Repealed (July 2024) |
-| BNS Sections | 358 | Active (Current Law) |
-| Constitution Articles | 448 | Active |
-| IPC → BNS Mapping | Full | Complete |
-| Resource Links | 100+ | Updated |
+A comprehensive legal portal helping common people in India know their rights and access justice.
 
 ---
 
-## Quick Access - Emergency Help
+## 📊 What's Inside
 
-### Immediate Emergency
+| Data | Count | Description |
+|------|-------|--------------|
+| **IPC** | 511 sections | Indian Penal Code (Repealed July 2024) |
+| **BNS** | 358 sections | Bharatiya Nyaya Sanhita (Current Law) |
+| **Constitution** | 448 articles | Constitution of India |
+| **Resource Links** | 100+ | Complaint portals, helplines, legal aid |
+
+---
+
+## 🚀 Features
+
+- 🔍 **Instant Search** - Search IPC, BNS, Constitution by section or keyword
+- 🚨 **Emergency Contacts** - Police 100, Women Helpline 181, Legal Aid 15100
+- 📜 **Law Browser** - Browse laws by section number
+- 🔗 **Online Complaint Filing** - Direct links to file FIR/Police complaints
+- 📋 **IPC → BNS Mapping** - Quick reference for all key crimes
+- ⚖️ **Free Legal Aid** - Links to NALSA and State Legal Services
+
+---
+
+## 📱 Quick Help Numbers
+
 | Service | Contact |
 |---------|---------|
-| Police | 100 |
+| Police Emergency | 100 |
 | Women Helpline | 181 |
 | Child Helpline | 1098 |
-| Legal Aid Free | **15100** |
+| **Free Legal Aid** | **15100** |
 | Emergency | 112 |
-
-### Crime Reporting
-
-| Situation | Link |
-|-----------|------|
-| Cyber Crime | [cybercrime.gov.in](https://cybercrime.gov.in) |
-| General FIR (Delhi) | [delhipolice.gov.in](https://delhipolice.gov.in) |
-| General FIR (Maharashtra) | [citizen.mahapolice.gov.in](https://citizen.mahapolice.gov.in) |
-| Police Services | [digitalpolice.gov.in](https://digitalpolice.gov.in) |
-
-### Free Legal Help
-
-| Service | Link |
-|---------|------|
-| Legal Aid Application | [nalsa.gov.in](https://nalsa.gov.in/services/legal-aid) |
-| Find Free Lawyer | Visit District Legal Services Authority |
-| Legal Aid Helpline | **15100** (Toll-Free) |
+| Cyber Crime | 1930 |
 
 ---
 
-## How to File Complaint - Situation Based
+## 🔗 Key Resources
 
-### 1. Cyber Fraud / Online Scam
-1. Call your bank immediately → block transaction
-2. File at [cybercrime.gov.in](https://cybercrime.gov.in)
-3. Save acknowledgment number
-4. File police complaint
+### File Complaints
+- [Cyber Crime Portal](https://cybercrime.gov.in)
+- [Digital Police](https://digitalpolice.gov.in)
+- [Delhi Police](https://delhipolice.gov.in)
+- [Maharashtra Police](https://citizen.mahapolice.gov.in)
 
-### 2. Theft / Burglary
-1. File FIR at your **state police portal**
-2. Get FIR copy
-3. Use for insurance claim
+### Legal Aid
+- [NALSA Portal](https://nalsa.gov.in)
+- [Apply for Free Lawyer](https://nalsa.gov.in/services/legal-aid)
+- [Government Grievances](https://pgportal.gov.in)
 
-### 3. Domestic Violence
-1. Call **181** (Women Helpline)
-2. File complaint at police station
-3. Apply for protection order at court
-4. Contact **District Legal Services Authority** for free lawyer
-
-### 4. Can't Afford Lawyer
-1. Call **15100** (Legal Aid Helpline)
-2. Apply online at [nalsa.gov.in](https://nalsa.gov.in/services/legal-aid)
-3. Free lawyer will be provided
-
-### 5. Police Not Taking Action
-1. Wait 7 days
-2. File complaint to SP/Commissioner
-3. If no response in 30 days → [pgportal.gov.in](https://pgportal.gov.in)
-4. Contact Human Rights Commission if serious
-
-### 6. Workplace Harassment (POSH)
-1. File complaint to Internal Committee
-2. If no response in 10 days → file with Local Committee
-3. Contact NALSA for free legal aid
+### Courts
+- [eCourts Portal](https://services.ecourts.gov.in)
+- [Supreme Court](https://main.sci.gov.in)
+- [Case Status](https://njdg.ecourts.gov.in)
 
 ---
 
-## State Police Portals (File FIR Online)
-
-| State | Portal |
-|-------|--------|
-| Delhi | [delhipolice.gov.in](https://delhipolice.gov.in) |
-| Maharashtra | [citizen.mahapolice.gov.in](https://citizen.mahapolice.gov.in) |
-| Uttar Pradesh | [uppolice.gov.in](https://uppolice.gov.in) |
-| Karnataka | [sevasindhu.karnataka.gov.in](https://sevasindhu.karnataka.gov.in) |
-| Tamil Nadu | [tnpoliceservices.gov.in](https://tnpoliceservices.gov.in) |
-| West Bengal | [wbpolice.gov.in](https://wbpolice.gov.in) |
-| Gujarat | [gujaratpolice.gov.in](https://gujaratpolice.gov.in) |
-| Kerala | [keralapolice.gov.in](https://keralapolice.gov.in) |
-| Punjab | [punjabpolice.gov.in](https://punjabpolice.gov.in) |
-| Haryana | [haryanapolice.gov.in](https://haryanapolice.gov.in) |
-
----
-
-## Important Legal Sections (Quick Reference)
-
-### Crimes Against Person
+## 📋 Quick Reference - Key Laws
 
 | Crime | IPC (Old) | BNS (New) | Punishment |
-|-------|----------|-----------|------------|
+|-------|-----------|-----------|------------|
 | Murder | 302 | 100 | Death/Life |
-| Attempt Murder | 307 | 107 | 10 years |
-| Culpable Homicide | 304 | 103 | Life/10 yrs |
-| Hurt | 319 | 115 | 3 years |
-| Grievous Hurt | 320,325 | 116,118 | 7 years |
+| Rape | 375 | 92 | Life/10 years |
+| Theft | 379 | 138 | 3 years |
+| Dowry Death | 304B | 80,105 | Life/7 years |
+| Cruelty (Husband) | 498A | 189 | 3 years |
 | Acid Attack | 326A | 121 | Life |
-| Rape | 375 | 92 | Life/10 yrs |
-| Gang Rape | 376D | 95 | Death |
-| Theft | 379 | 138 | 3 years |
-| Robbery | 390,392 | 147 | 10 years |
-| Extortion | 383,384 | 143 | 3 years |
-| Cheating | 420 | 160 | 7 years |
-| Criminal Breach of Trust | 406 | 155 | 3 years |
-
-### Crimes Against Women & Children
-
-| Crime | IPC (Old) | BNS (New) | Punishment |
-|-------|----------|-----------|------------|
-| Dowry Death | 304B | 80,105 | Life/7 yrs |
-| Cruelty (Husband/Relative) | 498A | 189 | 3 years |
-| Stalking | 354D | 90 | 3 years |
-| Voyeurism | 354C | 89 | 3 years |
-| Sexual Harassment | 354A | 87 | 3 years |
-| Trafficking | 370,372 | 135 | Life |
 | Kidnapping | 363 | 125 | 7 years |
-
-### Offences Against State
-
-| Crime | IPC (Old) | BNS (New) | Punishment |
-|-------|----------|-----------|------------|
-| Sedition | 124A | 304 | Life/3 yrs |
-| Waging War | 121 | 299 | Death/Life |
-| Terrorism | New | 111 | Death |
-
-### Property Crimes
-
-| Crime | IPC | BNS | Punishment |
-|------|-----|-----|------------|
-| Theft | 379 | 138 | 3 years |
-| House Breaking | 448 | 173 | 3 years |
-| Mischief | 425,426 | 164 | 3 months |
-| Forgery | 463,465 | 177 | 2 years |
+| Cheating | 420 | 160 | 7 years |
+| Robbery | 392 | 147 | 10 years |
 
 ---
 
-## BNS Key Changes from IPC (Important)
+## 🛠️ Tech Stack
 
-1. **Community Service** - NEW punishment added (BNS Section 4)
-2. **Organized Crime** - New provisions (BNS 111)
-3. **Terrorism** - Newly defined offence
-4. **Stricter for Women/Children** - Enhanced punishments
-5. **Digital Evidence** - Now specifically recognized
-6. **Zero FIR** - Mandatory registration from any station
+- HTML5, CSS3, JavaScript
+- No frameworks required
+- Responsive design (mobile-friendly)
+- JSON data files
 
 ---
 
-## Legal Resources by Category
-
-### Free Legal Aid
-- [NALSA Portal](https://nalsa.gov.in) → Apply for free lawyer
-- State Legal Services Authorities in every district
-
-### Women Safety
-- [Women Assistance](https://nalsa.gov.in/womens-assistance/)
-- Nari Ki Udaan Scheme
-
-### Consumer Rights
-- [Consumer Helpline](https://consumeraffairs.nic.in): 1800-11-4000
-
-### Worker Rights
-- [EPFO](https://epfindia.gov.in)
-- [Labor Helpline](https://labour.gov.in): 1800-11-4756
-
-### Property
-- [Land Records](https://bhumigram.nic.in)
-
-### RTI
-- [File RTI Online](https://rtionline.gov.in)
-
----
-
-## Directory Structure
+## 📁 Directory Structure
 
 ```
 india-legal-data/
-├── README.md                    # This file
-├── api_helper.py               # Python API helper
+├── index.html          # Main website
+├── styles.css         # Styling
+├── app.js             # JavaScript
+├── README.md           # This file
 └── data/
-    ├── ipc.json              # All 511 IPC sections
-    ├── bns.json             # All 358 BNS sections
-    ├── constitution.json     # Constitution articles
-    ├── mapping.json        # IPC → BNS mapping + quick guides
-    └── resources.json     # All links & emergency contacts
+    ├── ipc.json           # 511 IPC sections
+    ├── bns.json           # 358 BNS sections
+    ├── constitution.json   # Constitution articles
+    ├── mapping.json       # IPC → BNS mapping
+    └── resources.json     # All resource links
 ```
 
 ---
 
-## Using the Data (For Developers)
+## 🤝 Contributing
 
-```python
-import json
-
-# Load data
-with open('data/bns.json') as f:
-    bns = json.load(f)
-
-with open('data/resources.json') as f:
-    resources = json.load(f)
-
-# Find section for murder
-for s in bns['sections']:
-    if s['section'] == 100:
-        print(f"BNS 100: {s['title']} - {s['punishment']}")
-
-# Get cybercrime portal
-print(resources['categories']['cybercrime']['links'][0]['url'])
-```
+1. Fork this repo
+2. Make improvements
+3. Submit Pull Request
 
 ---
 
-## Sources
-
-- BNS: Gazette of India, Dec 2023
-- IPC: India Code (indiacode.nic.in)
-- Constitution: constitutionofindia.nic.in
-- Portals: Ministry of Home Affairs, NALSA, State Police
-
-## License
+## 📝 License
 
 Open Data - CC0 1.0 Universal
 
-## Contributing
+---
 
-1. Fork this repo
-2. Add corrections or new links
-3. Submit PR
+<p align="center">
+  <strong>Remember: You have the right to justice. Don't stay silent.</strong><br>
+  <em>Free Legal Aid Helpline: 15100 | Women Helpline: 181</em>
+</p>
 
 ---
 
-**Remember: You have the right to justice. Don't stay silent.**
-- **Legal Aid Helpline: 15100** (Free)
-- **Women Helpline: 181**
-- **Child Helpline: 1098**
+<p align="center">
+  <img src="https://komarev.com/pp/?u=MysticDevloper/india-legal-data" alt="Profile Views">
+</p>
