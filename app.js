@@ -218,3 +218,59 @@ function closeModal(event) {
         document.querySelector('.modal-overlay')?.remove();
     }
 }
+
+// Current tab
+let currentTab = 'bns';
+
+// Switch tabs
+function switchTab(tab) {
+    currentTab = tab;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab' + tab.charAt(0).toUpperCase() + tab.slice(1)).classList.add('active');
+    document.getElementById('lawResults').innerHTML = '';
+}
+
+// Search by keyword in section browser
+function searchByKeyword(keyword) {
+    if (!keyword || keyword.trim().length < 1) {
+        document.getElementById('lawResults').innerHTML = '';
+        return;
+    }
+    
+    const searchTerm = keyword.toLowerCase().trim();
+    let data = currentTab === 'bns' ? bnsData : (currentTab === 'ipc' ? ipcData : constitutionData);
+    
+    const results = data.filter(law => law.title && law.title.toLowerCase().includes(searchTerm));
+    
+    let resultsHTML = '';
+    if (results.length > 0) {
+        resultsHTML = '<h3>' + (currentTab === 'constitution' ? 'Articles' : 'Sections') + '</h3>';
+        results.slice(0, 20).forEach(law => {
+            resultsHTML += createResultCard(law, currentTab === 'constitution' ? 'Constitution' : (currentTab === 'bns' ? 'BNS' : 'IPC'));
+        });
+    } else {
+        resultsHTML = '<p style="text-align:center; color:#666;">No results found</p>';
+    }
+    
+    document.getElementById('lawResults').innerHTML = resultsHTML;
+}
+
+// Search by section number
+function searchBySection() {
+    const sectionNum = parseInt(document.getElementById('sectionNumber').value);
+    if (!sectionNum) {
+        document.getElementById('lawResults').innerHTML = '';
+        return;
+    }
+    
+    let data = currentTab === 'bns' ? bnsData : (currentTab === 'ipc' ? ipcData : constitutionData);
+    
+    let law = data.find(l => l.section === sectionNum || l.article === sectionNum);
+    
+    if (law) {
+        const resultsHTML = createResultCard(law, currentTab === 'constitution' ? 'Constitution' : (currentTab === 'bns' ? 'BNS' : 'IPC'));
+        document.getElementById('lawResults').innerHTML = resultsHTML;
+    } else {
+        document.getElementById('lawResults').innerHTML = '<p style="text-align:center; color:#666;">Section ' + sectionNum + ' not found</p>';
+    }
+}

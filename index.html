@@ -108,7 +108,7 @@
                 <button class="tab" onclick="switchTab('constitution')" id="tabConstitution">Constitution</button>
             </div>
             <div class="search-input">
-                <input type="number" id="sectionNumber" placeholder="Enter section number (e.g., 100, 302, 14)">
+                <input type="number" id="sectionNumber" placeholder="Enter section number (e.g., 100, 302, 14)" onkeyup="searchBySection()">
                 <input type="text" id="sectionSearch" placeholder="Or search by keyword..." onkeyup="searchByKeyword(this.value)">
             </div>
             <div id="lawResults" class="law-results"></div>
